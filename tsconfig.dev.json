@@ -4,7 +4,7 @@
     "composite": true,
     "incremental": true,
     "tsBuildInfoFile": "./tmp/.tsbuildinfo",
-    "outDir": "./.ts"
+    "outDir": "./out"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/tysts/loose"]

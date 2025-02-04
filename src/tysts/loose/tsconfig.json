@@ -9,7 +9,7 @@
     "strictNullChecks": false,
     // Actually affects the functionality:
     "exactOptionalPropertyTypes": false,
-    "outDir": "./.ts"
+    "outDir": "./out"
   },
   "include": ["**/*.ts"]
 }
