@@ -1,7 +1,7 @@
 {
-  "name": "typesaurus",
-  "version": "10.7.0",
-  "description": "Type-safe ODM for Firestore",
+  "name": "@tixae-labs/typesaurus",
+  "version": "1.0.0",
+  "description": "Type-safe ODM for Firestore with databaseId support",
   "keywords": [
     "Firebase",
     "Firestore",
@@ -178,8 +178,8 @@
       }
     }
   },
-  "repository": "https://github.com/kossnocorp/typesaurus",
-  "author": "Sasha Koss <koss@nocorp.me>",
+  "repository": "https://github.com/Moe03/typesaurus",
+  "author": "Moe03 <moeaymandev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.18.10",
@@ -202,5 +202,16 @@
     "size-limit-preset-node-lib": "^0.1.0",
     "typescript": "^5.4.4",
     "vitest": "^1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
   }
 }
