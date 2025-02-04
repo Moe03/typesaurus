@@ -21,10 +21,10 @@ export const nativeSymbol = Symbol("native");
  */
 export const dbSymbol = Symbol("db");
 
-export function schema(getSchema, options) {
+export function schema(getSchema, options, databaseId) {
   let firestore;
   const schema = getSchema(schemaHelpers());
-  return db(() => (firestore = firestore || createFirestore(options)), schema);
+  return db(() => (firestore = firestore || createFirestore(options, databaseId)), schema);
 }
 
 export class Collection {

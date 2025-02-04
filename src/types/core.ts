@@ -10,6 +10,7 @@ export namespace TypesaurusCore {
     <Schema extends PlainSchema, Opts extends Options>(
       getSchema: ($: SchemaHelpers) => Schema,
       options?: Opts,
+      databaseId?: string,
     ): DB<Schema>;
   }
 

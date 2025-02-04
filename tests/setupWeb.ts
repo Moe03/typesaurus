@@ -12,9 +12,12 @@ if (!projectId || !apiKey)
   throw new Error("FIREBASE_PROJECT_ID and FIREBASE_API_KEY must be set");
 
 // Test that the schema works before initializing the app
-schema(($) => ({
-  test: $.collection<{}>(),
-}));
+schema(
+  ($) => ({
+    test: $.collection<{}>(),
+  }),
+  {},
+);
 
 initializeApp({ apiKey, projectId });
 

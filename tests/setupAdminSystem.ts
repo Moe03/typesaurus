@@ -3,9 +3,13 @@ import serviceKey from "../secrets/key.json";
 import { schema } from "../src";
 
 // Test that the schema works before initializing the app
-schema(($) => ({
-  test: $.collection<{}>(),
-}));
+schema(
+  ($) => ({
+    test: $.collection<{}>(),
+  }),
+  {},
+  "(default)",
+);
 
 admin.initializeApp(
   serviceKey && {
