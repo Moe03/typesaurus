@@ -18,10 +18,7 @@ export namespace TypesaurusCore {
    * Define custom id passing the collection path string as the generic.
    */
   export type Id<Path extends string | symbol | Array<string | symbol>> =
-    string & {
-      [idBrand]: Path;
-    };
-  declare const idBrand: unique symbol;
+    string;
 
   /**
    * The custom id constrain. Used to define collection id type.
@@ -1354,8 +1351,8 @@ export namespace TypesaurusCore {
           Doc: TypesaurusCore.Doc<Def, DocProps>;
 
           /**
-           * The type represents the document data. It’s what you get reading or
-           * creating a document via collection’s doc.
+           * The type represents the document data. It's what you get reading or
+           * creating a document via collection's doc.
            *
            * [Learn more on the docs website](https://typesaurus.com/types/schema/#data)
            */
@@ -1629,7 +1626,7 @@ export namespace TypesaurusCore {
           TransactionWriteDoc: Transaction.WriteDoc<Def, DocProps>;
 
           /**
-           * The type represents the document definition. It’s in many methods
+           * The type represents the document definition. It's in many methods
            * as a generic parameter.
            *
            * [Learn more on the docs website](https://typesaurus.com/types/schema/#def)
