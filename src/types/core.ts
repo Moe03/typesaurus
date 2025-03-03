@@ -1051,7 +1051,7 @@ export namespace TypesaurusCore {
       Environment extends RuntimeEnvironment,
       Props extends DocProps & { environment: Environment },
     >(
-      id: Def["Id"],
+      id: string,
       options?: ReadOptions<Environment, Props>,
     ): SubscriptionPromise<GetRequest, Doc<Def, Props> | null>;
 
@@ -1059,7 +1059,7 @@ export namespace TypesaurusCore {
       Environment extends RuntimeEnvironment,
       Props extends DocProps & { environment: Environment },
     >(
-      ids: Def["Id"][],
+      ids: string[],
       options?: ReadOptions<Environment, Props>,
     ): SubscriptionPromise<ManyRequest, Array<Doc<Def, Props> | null>>;
 
@@ -1075,7 +1075,7 @@ export namespace TypesaurusCore {
       Environment extends RuntimeEnvironment,
       Props extends DocProps & { environment: Environment },
     >(
-      id: Def["Id"],
+      id: string,
       data: AssignArg<UnionVariableModelType<Def["WideModel"]>, Props>,
       options?: OperationOptions<Environment>,
     ): Promise<Ref<Def>>;
@@ -1084,16 +1084,16 @@ export namespace TypesaurusCore {
       Environment extends RuntimeEnvironment,
       Props extends DocProps & { environment: Environment },
     >(
-      id: Def["Id"],
+      id: string,
       data: AssignArg<UnionVariableModelType<Def["WideModel"]>, Props>,
       options?: OperationOptions<Environment>,
     ): Promise<Ref<Def>>;
 
     update: Update.CollectionFunction<Def>;
 
-    remove(id: Def["Id"]): Promise<Ref<Def>>;
+    remove(id: string): Promise<Ref<Def>>;
 
-    ref(id: Def["Id"]): Ref<Def>;
+    ref(id: string): Ref<Def>;
 
     doc<
       Environment extends RuntimeEnvironment,
@@ -1106,7 +1106,7 @@ export namespace TypesaurusCore {
       Environment extends RuntimeEnvironment,
       Props extends DocProps & { environment: Environment },
     >(
-      id: Def["Id"],
+      id: string,
       data: DocData<Def, Props>,
       options?: OperationOptions<Environment>,
     ): Doc<Def, Props>;

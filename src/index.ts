@@ -128,7 +128,7 @@ export namespace Typesaurus {
    *
    * @deprecated Use `SharedRef` instead. Might be removed in the next major version.
    */
-  export type Id<Path extends string> = Core.Id<Path>;
+  export type Id<Path extends string> = string;
 
   /**
    * The type allows defining collection types.

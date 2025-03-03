@@ -1,6 +1,6 @@
 {
   "name": "@tixae-labs/typesaurus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type-safe ODM for Firestore with databaseId support",
   "keywords": [
     "Firebase",
